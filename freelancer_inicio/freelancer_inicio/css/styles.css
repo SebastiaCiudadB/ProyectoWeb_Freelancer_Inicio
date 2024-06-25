@@ -1,0 +1,166 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+
+html {
+    font-size: 62.5%;
+
+    /*Las siguientes lineas, hasta $, hacen que el tamaño que definimos a un elemento,
+    no se vea afectado por si luego añadimos padding, borders, o margenes.
+    Es lo mismo que existan estas lineas y poner:
+        heigh: 450px;
+        padding: 20px;
+    
+    O si no las ponemos y escibimos:
+        heigh: 410px;
+        padding: 20px;
+    
+    En los dos casos, el elemento acaba midiendo 450px.*/
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/* $ */
+
+
+
+body{
+    font-size: 16px;
+    font-family: "Krub", sans-serif;
+}
+
+/*Con las dos lineas de arriba conseguimos una proporcion de 1rem = 10px*/
+/*Usamos el rem porque es una  forma de adaptar el tamaño del texto a los tamaños de las pantallas*/
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+
+
+.titulo {
+    color: var(--primario);
+}
+
+.titulo span {  
+    font-size: 2rem;
+} 
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Creamos una classe boton para poder reutilizarlo mas adelante.*/
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+
+    margin-top: 1rem;
+
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    border-radius: .5rem;
+
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 760px){
+    .boton{
+        width: auto;
+    }
+}
+
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+/*El media queri nos permite modificar algunos elementos en caso de que se cumpla la condicion del parentesis
+En este caso, se modificara la alineacion de la navegacion principal en forma de fila, si la 
+pantalla tiene como minimo 768 pixeles.*/
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+
+    /*Si usamos margin-top, para poner un margen en la parte superior de esta seccion, se ampliara el
+    espacio por fuera del elemento.
+    Si usamos padding-top, se amplia lo mismo pero desde dentro del elemento*/
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navegacion-principal a:hover{
+    color: var(--oscuro);
+    background-color: var(--primario);
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover  ;
+
+    height: 450px;
+
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+
+    /*Los primeros tres numeros definen el color que queremos, y el quarto nos permmite manipular
+    la intensidad de este color.*/
+    background-color: rgba(0, 0, 0, .6); /*Sintaxis antigua*/
+    background-color: rgb( 0 0 0 / 60%); /*Sintaxis nueva*/
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
