@@ -4,6 +4,7 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
 }
 
 html {
@@ -32,6 +33,14 @@ html {
 body{
     font-size: 16px;
     font-family: "Krub", sans-serif;
+
+    /*hacemos un degradado en el fonodo de nuestra web.
+    Los atributos de la funcion linear-gradient son:
+        1- Direccion.
+        2- Color por el que empezamos
+        3- Color en el que acabamos
+    Los porcentajes en el atributo 2 y 3, son la altura o la que van a tener que llegar al color.*/
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
 /*Con las dos lineas de arriba conseguimos una proporcion de 1rem = 10px*/
@@ -79,9 +88,9 @@ h3{
     text-transform: uppercase;
     font-weight: 700;
 
-    border-radius: 5rem;
+    border-radius: .5rem;
 
-    width: 90%;
+    width: 70%;
     text-align: center;
 }
 
