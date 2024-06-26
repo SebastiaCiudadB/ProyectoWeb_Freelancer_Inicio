@@ -75,6 +75,16 @@ h3{
     margin: 0 auto;
 }
 
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);   
+    background-color: var(--blanco);
+
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
 /*Creamos una classe boton para poder reutilizarlo mas adelante.*/
 .boton{
     background-color: var(--secundario);
@@ -145,6 +155,7 @@ pantalla tiene como minimo 768 pixeles.*/
     background-size: cover  ;
 
     height: 450px;
+    margin-bottom: 2rem;
 
     position: relative;
 }
