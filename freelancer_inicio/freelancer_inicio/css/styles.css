@@ -184,3 +184,22 @@ pantalla tiene como minimo 768 pixeles.*/
     display: flex;
     align-items: flex-end;
 }
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+    
+        grid-template-columns: repeat(3, 1fr);
+        /*En el grid template, podemos decidr el tamaño de las columnas y filas por pixeles, porcentajes
+        o fracciones.*/
+        
+        /*Si suamos:
+            grid-template-columns: 300px 300px;
+            grid-template-rows: 200px 800px;
+    
+        Es lo mismo que usar:
+            grid: 200px 800px / 300px 300px
+        
+        Estamos usando el mismo codigo, covertimos dos lineas de codigo en una sola.*/
+    }
+}
