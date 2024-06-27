@@ -22,12 +22,24 @@ html {
     
     En los dos casos, el elemento acaba midiendo 450px.*/
     box-sizing: border-box;
+
+    /*Esta linea de codigo nos permite hacer scroll hacia abajo y detenernos en los puntos
+    que nos interese añadiendo otras lineas de codigo.*/
+    scroll-snap-type: y mandatory;
 }
+
 *, *:before, *:after{
     box-sizing: inherit;
 }
 /* $ */
 
+/*Scroll snap*/
+.servicio,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
 
 
 body{
