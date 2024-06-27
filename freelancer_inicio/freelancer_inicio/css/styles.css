@@ -46,7 +46,7 @@ body{
 /*Con las dos lineas de arriba conseguimos una proporcion de 1rem = 10px*/
 /*Usamos el rem porque es una  forma de adaptar el tamaño del texto a los tamaños de las pantallas*/
 
-h1, h2, h3{
+h1, h2, h3, p{
     text-align: center;
 }
 
@@ -201,5 +201,35 @@ pantalla tiene como minimo 768 pixeles.*/
             grid: 200px 800px / 300px 300px
         
         Estamos usando el mismo codigo, covertimos dos lineas de codigo en una sola.*/
+
+        column-gap: 1rem;
     }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+.servicio p{
+    line-height: 2;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+
+    background-color: var(--primario);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
