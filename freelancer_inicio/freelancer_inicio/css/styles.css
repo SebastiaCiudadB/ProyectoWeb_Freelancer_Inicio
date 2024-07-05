@@ -318,7 +318,7 @@ pantalla tiene como minimo 768 pixeles.*/
 
 .campo textarea{
     height: 20rem;
-    resize: block;
+    resize: none !important;
 }
 
 .input-text{
